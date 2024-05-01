@@ -6,9 +6,10 @@ return {
 
 	config = function()
 		local telescope = require('telescope')
-	end,
+	end,	
 
-	dependencies = { 'nvim-lua/plenary.nvim' },
+    },
+  dependencies = { 'nvim-lua/plenary.nvim' },
+  lazy = false,
 
-    }
 }

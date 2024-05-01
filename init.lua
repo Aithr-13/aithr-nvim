@@ -21,4 +21,11 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup("plugins")
-vim.cmd.colorscheme "nord"
+vim.cmd.colorscheme "onenord"
+require("lualine").setup()
+vim.opt.showmode = false
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
+
