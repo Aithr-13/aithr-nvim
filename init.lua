@@ -1,31 +1,5 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.g.mapleader = " "
+require("config.lazy")
+require("config.settings")
 
-
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-
-
-require("lazy").setup("plugins")
-vim.cmd.colorscheme "onenord"
-require("lualine").setup()
-vim.opt.showmode = false
-vim.opt.foldmethod = "indent"
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
 
 

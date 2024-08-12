@@ -1,9 +1,15 @@
--- references:
--- https://github.com/nvim-neo-tree/neo-tree.nvim
--- https://github.com/nvim-neo-tree/neo-tree.nvim/wiki/Recipes
-return {
-  "nvim-neo-tree/neo-tree.nvim",
-  dependencies = {
+
+return
+  {
+    {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+
+    },
+
+    {
+      "nvim-neo-tree/neo-tree.nvim",
+        dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
@@ -85,4 +91,5 @@ return {
       },
     })
   end,
+  },
 }
