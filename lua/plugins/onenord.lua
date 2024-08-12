@@ -1,9 +1,6 @@
-return
-  
-  {
-    "rmehri01/onenord.nvim",
-    name = "onenord",
-    priority = 1000
-
+return 
+{
+	"AlexvZyl/nordic.nvim",
+	name = "nordic",
+	priority = 1000,
 }
-
