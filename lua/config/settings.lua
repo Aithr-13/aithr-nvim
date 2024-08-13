@@ -3,12 +3,13 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
+vim.o.background = "dark"
 vim.cmd.colorscheme("nordic")
 vim.opt.showmode = false
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
-
+vim.opt.termguicolors = true
 vim.diagnostic.config({
 	virtual_text = false,
 })

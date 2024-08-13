@@ -27,4 +27,22 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			local nord = require("lualine.themes.nord")
+			require("lualine").setup({
+				options = { theme = nord },
+			})
+		end,
+	},
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup()
+		end,
+	},
 }

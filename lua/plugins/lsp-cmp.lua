@@ -12,6 +12,7 @@ return {
 			"LittleEndianRoot/mason-conform",
 			"williamboman/mason-lspconfig.nvim",
 			"mfussenegger/nvim-lint",
+			"rshkarin/mason-nvim-lint",
 		},
 		lazy = false,
 		config = function()
