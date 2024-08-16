@@ -14,6 +14,7 @@ return {
 		event = "VeryLazy",
 		keys = {
 			{ "\\", ":Neotree toggle<CR>", silent = true, desc = "File Explorer" },
+			{ "<leader>fn", ":Neotree focus <CR>", silent = true, desc = "Focus Neotree" },
 		},
 		lazy = false,
 		config = function()
