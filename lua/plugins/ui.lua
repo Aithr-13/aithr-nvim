@@ -14,7 +14,6 @@ return {
 			"rcarriga/nvim-notify",
 		},
 	},
-	{ "HiPhish/rainbow-delimiters.nvim" },
 	{
 		"echasnovski/mini.nvim",
 		version = false,
@@ -53,5 +52,11 @@ return {
 			-- …etc.
 		},
 		version = "^1.0.0", -- optional: only update when a new 1.x version is released
+	},
+	{
+		"kylechui/nvim-surround",
+		event = { "BufReadPre", "BufNewFile" },
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = true,
 	},
 }

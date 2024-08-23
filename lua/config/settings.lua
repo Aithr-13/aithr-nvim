@@ -22,7 +22,6 @@ au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=2
 augroup END
 ]])
 
-local palette = require("nordic.colors")
 -- Colors are applied automatically based on user-defined highlight groups.
 -- There is no default value.
 vim.cmd.highlight("IndentLine guifg=#434C5E")
@@ -38,10 +37,15 @@ vim.opt.fillchars = {
 	verthoriz = "╋",
 	eob = " ",
 }
-vim.cmd.highlight(string.format("RainbowDelimiterRed guifg =%s", palette.red.dim))
-vim.cmd.highlight(string.format("RainbowDelimiterYellow guifg =%s", palette.yellow.dim))
-vim.cmd.highlight(string.format("RainbowDelimiterBlue guifg =%s", palette.blue2))
-vim.cmd.highlight(string.format("RainbowDelimiterOrange guifg =%s", palette.orange.dim))
-vim.cmd.highlight(string.format("RainbowDelimiterGreen guifg =%s", palette.green.dim))
-vim.cmd.highlight(string.format("RainbowDelimiterViolet guifg =%s", palette.magenta.dim))
-vim.cmd.highlight(string.format("RainbowDelimiterCyan guifg =%s", palette.cyan.dim))
+local keymap = vim.keymap
+
+keymap.set("n", "<leader>v", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>h", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<leader>e", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+keymap.set("n", "<leader>x", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
