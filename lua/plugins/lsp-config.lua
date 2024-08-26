@@ -16,6 +16,11 @@ return {
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local mason_lspconfig = require("mason-lspconfig")
 			local capabilities = cmp_nvim_lsp.default_capabilities()
+			local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+			for type, icon in pairs(signs) do
+				local hl = "DiagnosticSign" .. type
+				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+			end
 			mason_lspconfig.setup_handlers({
 				-- default handler for installed servers
 				function(server_name)

@@ -18,6 +18,7 @@ wk.add({
 			mode = { "n", "v" }, -- NORMAL and VISUAL mode
 			{ "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
 			{ "<leader>w", "<cmd>w<cr>", desc = "Write" },
+			{ "<leader>y", "<cmd>YankBank<CR>", desc = "Yankbank" },
 		},
 		{ "jk", "<esc>", desc = "escape", mode = "niv" },
 	},
